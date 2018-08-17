@@ -1,0 +1,19 @@
+.weCharForm {
+    text-align: right;
+}
+
+.buttonApplyWechat {
+    background-color: aquamarine;
+    width: 30%;
+    height: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.buttonRemoveWechat {
+    background-color: rosybrown;
+    width: 30%;
+    height: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+}

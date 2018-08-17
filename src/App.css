@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  color: white;
+  height: 80px;
+}
+
+.App-header {
+  background-color: pink;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 240px;
+  padding: 20px;
+  color: white;
+  background-image: url("./Frog-and-Horse-WeChat-Stickers.png");
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.buttonSubmitDelivery {
+  margin-top: 15px;
+  background-color: aquamarine;
+}
+
+.submitOrder {
+  background-color: aquamarine;
+  width: 30%;
+  height: 50px;
+  font-weight: 700;
+  border-radius: 20px;
+}

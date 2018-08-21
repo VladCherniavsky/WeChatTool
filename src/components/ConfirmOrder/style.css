@@ -1,0 +1,11 @@
+.confirmOrder {
+    text-align: right;
+}
+
+.confirmOrderButton {
+    background-color: aquamarine;
+    width: 45%;
+    height: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+}

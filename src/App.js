@@ -6,6 +6,7 @@ import httpClient from './services/index';
 import Language from './components/Language';
 import WeChat from './components/WeChat';
 import Pooling from './components/Pooling';
+import ConfirmOrder from './components/ConfirmOrder';
 import Notification from './components/Notification';
 import './App.css';
 
@@ -193,6 +194,23 @@ class App extends Component {
     const response = await httpClient.fetch(isTokenActive, tokenOrGuestId, url);
   };
 
+  confirmOrder = async (data) => {
+    const {isTokenActive, tokenOrGuestId} = this.state;
+    const url = 'orders/current/callback-handler';
+
+    const params = {
+      method: 'POST',
+      data: data,
+      headers: new Headers({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      })
+    };
+
+    const response = await httpClient.fetch(isTokenActive, tokenOrGuestId, url, params);
+
+  };
+
   render() {
     return (
       <div className="App">
@@ -277,6 +295,12 @@ class App extends Component {
           <div className="wrapper">
             <Notification />
           </div>
+
+          <div className={'wrapper'}>
+            <ConfirmOrder confirmOrder={this.confirmOrder}/>
+          </div>
+
+
         </div>
       </div>
     );

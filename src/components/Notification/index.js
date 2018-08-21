@@ -6,7 +6,7 @@ export default class Notification extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sap_order_id: '',
+      transaction_id: '',
       action: '',
       notificationUrl: 'https://us.qa2.burberry.com/test/pay/confirmpay'
     }
@@ -25,7 +25,7 @@ export default class Notification extends React.Component {
     const response =  axios({
       url: this.state.notificationUrl,
       data: {
-        sap_order_id: this.state.sap_order_id,
+        sap_order_id: this.state.transaction_id,
         action: this.state.action
       },
       headers: {
@@ -44,10 +44,10 @@ export default class Notification extends React.Component {
 
         <form className={'notification'}>
           <div className="element">
-            <label >Sap Order Id: </label>
+            <label >Transaction id: </label>
             <input type="text"
-                   placeholder={'Sap Order Id'}
-                   onChange={this.handleInputChange('sap_order_id')}
+                   placeholder={'Transaction id'}
+                   onChange={this.handleInputChange('transaction_id')}
                    value={this.state.sap_order_id}/>
           </div>
 

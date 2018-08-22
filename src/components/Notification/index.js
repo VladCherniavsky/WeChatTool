@@ -25,7 +25,7 @@ export default class Notification extends React.Component {
     const response =  axios({
       url: this.state.notificationUrl,
       data: {
-        sap_order_id: this.state.transaction_id,
+        transaction_id: this.state.transaction_id,
         action: this.state.action
       },
       headers: {

@@ -11,7 +11,8 @@ export default class WeChat extends React.Component {
       first_name: '',
       last_name: '',
       phone: '',
-      device_type: ''
+      trade_type: '',
+      open_id: ''
     }
   }
 
@@ -25,7 +26,6 @@ export default class WeChat extends React.Component {
   };
 
   applyWeChat = () => {
-    console.log('apply', this.state)
     this.props.applyWeChat(this.state);
   };
 
@@ -64,10 +64,16 @@ export default class WeChat extends React.Component {
                  value={this.state.phone}/>
         </div>
         <div className="element">
-          <label>Device type: </label>
+          <label>Trade type: </label>
           <input type="text"
-                 onChange={this.handleInputChange('device_type')}
-                 value={this.state.device_type}/>
+                 onChange={this.handleInputChange('trade_type')}
+                 value={this.state.trade_type}/>
+        </div>
+        <div className="element">
+          <label>Open Id: </label>
+          <input type="text"
+                 onChange={this.handleInputChange('open_id')}
+                 value={this.state.open_id}/>
         </div>
       </form>
       <button className="buttonApplyWechat" onClick={this.applyWeChat}>

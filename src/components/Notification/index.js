@@ -8,7 +8,7 @@ export default class Notification extends React.Component {
     this.state = {
       transaction_id: '',
       action: '',
-      notificationUrl: 'https://us.qa2.burberry.com/test/pay/confirmpay'
+      notificationUrl: `https://us.${process.env.env || 'qa4'}.burberry.com/test/pay/confirmpay`
     }
   }
 
